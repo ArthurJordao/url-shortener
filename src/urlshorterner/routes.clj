@@ -1,6 +1,6 @@
-(ns ch3shortener.routes
-  (:require [ch3shortener.handler :as handler]
-            [ch3shortener.middleware :as mw]
+(ns urlshorterner.routes
+  (:require [urlshorterner.handler :as handler]
+            [urlshorterner.middleware :as mw]
             [compojure.route :as route]
             [compojure.core :refer :all]))
 

@@ -1,7 +1,7 @@
-(ns ch3shortener.application-test
+(ns urlshorterner.application-test
   (:require [clojure.test :refer :all]
             [ring.mock.request :as mock]
-            [ch3shortener.application :refer :all]))
+            [urlshorterner.application :refer :all]))
 
 (deftest test-app
   (testing "main route"
