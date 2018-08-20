@@ -1,4 +1,4 @@
-(ns ch3shortener.handler-test
+(ns ch3shortener.application-test
   (:require [clojure.test :refer :all]
             [ring.mock.request :as mock]
             [ch3shortener.application :refer :all]))
