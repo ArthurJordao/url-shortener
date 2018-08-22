@@ -3,7 +3,8 @@
             [ring.mock.request :as mock]
             [urlshorterner.handler :refer :all]
             [urlshorterner.storage.in-memory :refer [in-memory-storage]]
-            [urlshorterner.storage :as st]))
+            [urlshorterner.storage :as st]
+            [cheshire.core :as json]))
 
 (deftest get-link-test
   (let [stg (in-memory-storage)
@@ -74,3 +75,18 @@
       (let [response (delete-link stg "bogus")]
         (testing "the response is still 204"
           (is (= 204 (:status response))))))))
+
+(deftest list-links-test
+  (let [stg (in-memory-storage)
+        id-urls {"a" "http://link.to/a"
+                 "b" "http://link.to/b"
+                 "c" "http://link.to/c"}]
+    (doseq [[id url] id-urls]
+      (st/create-link stg id url))
+    (let [handler (list-links stg)
+          response (handler (mock/request :get "/links"))
+          parsed-links (json/decode (:body response))]
+      (testing "the response is a 200"
+        (is (= 200 (:status response))))
+      (testing "with a body that decodes to the original map"
+        (is (= id-urls parsed-links))))))
