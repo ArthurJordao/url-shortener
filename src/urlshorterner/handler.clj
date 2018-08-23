@@ -1,6 +1,5 @@
 (ns urlshorterner.handler
-  (:require [ring.util.request :as req]
-            [ring.util.response :as res]
+  (:require [ring.util.response :as res]
             [ring.middleware.json :refer [wrap-json-response]]
             [urlshorterner.storage :as st]))
 
