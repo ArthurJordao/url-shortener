@@ -4,6 +4,13 @@
             [compojure.route :as route]
             [compojure.core :refer :all]))
 
-(defroutes app-routes
-           (GET "/" [] "Hello World")
-           (route/not-found "Not Found"))
+(defn shorterner-routes
+  [stg]
+  (-> (routes
+        (POST "/links/:id" [id :as request] (handler/create-link stg id request))
+        (GET "/links/:id" [id] (handler/get-link stg id))
+        (PUT "/links/:id" [id :as request] (handler/update-link stg id request))
+        (DELETE "/links/:id" [id] (handler/delete-link stg id))
+        (GET "/links" [] (handler/list-links stg))
+        (route/not-found "Not Found"))
+      (wrap-routes mw/wrap-slurp-body)))
