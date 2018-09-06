@@ -1,6 +1,6 @@
-(ns urlshorterner.storage-test
+(ns shortener.storage-test
   (:require [clojure.test :refer :all]
-            [urlshorterner.storage :refer :all]))
+            [shortener.storage :refer :all]))
 
 (defn is-valid-storage ;; note, not deftest
   "Given an implementation of the Storage protocol, assert that it fulfills the

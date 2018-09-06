@@ -1,7 +1,7 @@
-(ns urlshorterner.handler
+(ns shortener.handler
   (:require [ring.util.response :as res]
             [ring.middleware.json :refer [wrap-json-response]]
-            [urlshorterner.storage :as st]))
+            [shortener.storage :as st]))
 
 (defn get-link
   [stg id]

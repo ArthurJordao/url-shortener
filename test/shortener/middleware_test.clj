@@ -1,6 +1,6 @@
-(ns urlshorterner.middleware-test
+(ns shortener.middleware-test
   (:require [clojure.test :refer :all]
-            [urlshorterner.middleware :refer :all]
+            [shortener.middleware :refer :all]
             [ring.mock.request :as mock]))
 
 (deftest wrap-slurp-body-test

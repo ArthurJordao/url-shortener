@@ -1,5 +1,5 @@
-(ns urlshorterner.storage.in-memory
-  (:require [urlshorterner.storage :refer :all]))
+(ns shortener.storage.in-memory
+  (:require [shortener.storage :refer :all]))
 
 (defn create-link*
   [!stg id url]

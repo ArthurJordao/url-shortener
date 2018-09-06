@@ -1,10 +1,10 @@
-(ns urlshorterner.routes
-  (:require [urlshorterner.handler :as handler]
-            [urlshorterner.middleware :as mw]
+(ns shortener.routes
+  (:require [shortener.handler :as handler]
+            [shortener.middleware :as mw]
             [compojure.route :as route]
             [compojure.core :refer :all]))
 
-(defn shorterner-routes
+(defn shortener-routes
   [stg]
   (-> (routes
         (POST "/links/:id" [id :as request] (handler/create-link stg id request))

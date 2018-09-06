@@ -1,4 +1,4 @@
-(ns urlshorterner.storage)
+(ns shortener.storage)
 
 (defprotocol Storage
   (create-link [this id url]

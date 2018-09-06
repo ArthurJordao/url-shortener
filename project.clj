@@ -9,7 +9,7 @@
                  [cheshire "5.5.0"]]
   :plugins [[lein-ring "0.9.7"]
             [lein-auto "0.1.3"]]
-  :ring {:handler ch3shortener.application/app}
+  :ring {:handler shortener.application/app}
   :profiles
   {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
                         [ring/ring-mock "0.3.0"]]}})

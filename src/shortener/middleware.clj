@@ -1,4 +1,4 @@
-(ns urlshorterner.middleware
+(ns shortener.middleware
   (:import [java.io InputStream]))
 
 (defn wrap-slurp-body

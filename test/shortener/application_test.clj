@@ -1,7 +1,7 @@
-(ns urlshorterner.application-test
+(ns shortener.application-test
   (:require [clojure.test :refer :all]
             [ring.mock.request :as mock]
-            [urlshorterner.application :refer :all]
+            [shortener.application :refer :all]
             [cheshire.core :as json]))
 
 (deftest test-app
