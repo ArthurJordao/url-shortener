@@ -8,7 +8,8 @@
                  [ring/ring-json "0.4.0"]
                  [cheshire "5.5.0"]]
   :plugins [[lein-ring "0.9.7"]
-            [lein-auto "0.1.3"]]
+            [lein-auto "0.1.3"]
+            [lein-cloverage "1.0.7-SNAPSHOT"]]
   :ring {:handler shortener.application/app}
   :profiles
   {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
