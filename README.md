@@ -1,6 +1,6 @@
-# ch3shortener
+# Url Shortener
 
-FIXME
+This is a project inspired by professional clojure book.
 
 ## Prerequisites
 
@@ -14,6 +14,11 @@ To start a web server for the application, run:
 
     lein ring server
 
+If you wanna just start the application you can use docker compose:
+   
+    docker-compose up
+
 ## License
 
-Copyright © 2018 FIXME
+MIT License
+Copyright (c) 2018 Arthur Bernardi Jordão
