@@ -21,4 +21,5 @@ If you wanna just start the application you can use docker compose:
 ## License
 
 MIT License
+
 Copyright (c) 2018 Arthur Bernardi Jordão
